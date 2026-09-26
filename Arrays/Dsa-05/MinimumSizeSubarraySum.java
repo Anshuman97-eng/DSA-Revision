@@ -6,17 +6,19 @@ public class MinimumSizeSubarraySum {
         int left = 0;
         int count = 0;
         int sum = 0;
+        int minLength = Integer.MAX_VALUE;
 
         for(int i=0 ; i< nums.length ; i++){
             sum += nums[i];
 
             while(sum >= target){
                 count = i - left + 1;
+                minLength = Math.min(minLength,count);
                 sum -= nums[left];
                 left++;
             }
         }
-        return count;
+        return minLength;
     }
 
     public static void main(String[] args) {
