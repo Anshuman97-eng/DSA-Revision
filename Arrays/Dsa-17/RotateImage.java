@@ -4,7 +4,6 @@ class RotateImage {
 
     public static void rotate(int[][] matrix) {
         int n = matrix.length;
-        int m = matrix[0].length;
 
         // transpose ..
         for(int i=0 ; i<matrix.length ; i++){
