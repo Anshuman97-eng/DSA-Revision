@@ -10,7 +10,6 @@ public class IsSubsequence {
         while(left < s.length() && right < t.length()){
             if(s.charAt(left) == t.charAt(right)){
                 left++;
-                right++;
             }
             right++;
         }
