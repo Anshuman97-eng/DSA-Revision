@@ -13,9 +13,7 @@ public class SubarraySumEqualsK {
         for(int n : nums){
             prefix += n;
             sum = prefix - k;
-            if(map.containsKey(sum)){
-                count = count + 1;
-            }
+            count += map.getOrDefault(sum, 0);
             map.put(prefix, map.getOrDefault(prefix, 0) + 1);
         }
 
